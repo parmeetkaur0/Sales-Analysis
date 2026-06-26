@@ -80,18 +80,27 @@ These tables are connected using relationships to create a complete sales data m
 - Data Visualization
 
 ---
-
 ## 📸 Dashboard Preview
-```
-- Key Insights
-<img width="559" height="359" alt="image" src="https://github.com/user-attachments/assets/1ab0bf97-8776-4c33-9823-23c8acf92b85" />
-- Profit Analysis
-<img width="562" height="335" alt="image" src="https://github.com/user-attachments/assets/0a9b9561-4c23-431b-8ff8-2d97e30aa918" />
-- Performance Insights
-<img width="552" height="338" alt="image" src="https://github.com/user-attachments/assets/1c94b54e-4bbb-4131-b374-6a96a9d817ab" />
 
+### 📌 Key Insights
+Provides an executive summary of overall business performance, including total revenue, sales quantity, revenue trends, and top-performing markets.
 
-```
+![Key Insights](https://github.com/user-attachments/assets/1ab0bf97-8776-4c33-9823-23c8acf92b85)
+
+---
+
+### 📈 Profit Analysis
+Visualizes profit across products, customers, and markets to identify high-profit segments and areas requiring improvement.
+
+![Profit Analysis](https://github.com/user-attachments/assets/0a9b9561-4c23-431b-8ff8-2d97e30aa918)
+
+---
+
+### 📊 Performance Insights
+Analyzes sales performance through product-wise, customer-wise, and regional metrics to support business decision-making.
+
+![Performance Insights](https://github.com/user-attachments/assets/1c94b54e-4bbb-4131-b374-6a96a9d817ab)
+
 
 ---
 
