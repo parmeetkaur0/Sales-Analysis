@@ -1,58 +1,98 @@
-## Sales Insights Data Analysis Project
+# 📊 Sales Insights Dashboard
 
-### Instructions to setup mysql on your local computer
+An interactive Business Intelligence dashboard built using **Power BI**, **SQL**, and **MySQL** to analyze sales performance and generate actionable business insights. The project demonstrates the complete analytics workflow from data extraction and transformation to visualization and reporting.
 
-1. Follow step in this video to install mysql on your local computer
-https://www.youtube.com/watch?v=WuBcTJnIuzo
+---
 
-1. SQL database dump is in db_dump.sql file above. Download `db_dump.sql` file to your local computer and import it as per instructions given in the tutorial video
+## 🚀 Project Overview
 
-### Data Analysis Using SQL
+This dashboard helps business stakeholders monitor sales performance through interactive visualizations and KPIs. Data was extracted from a MySQL database, cleaned using Power Query, and visualized in Power BI.
 
-1. Show all customer records
+---
 
-    `SELECT * FROM customers;`
+## 🛠️ Tech Stack
 
-1. Show total number of customers
+- Power BI
+- MySQL
+- SQL
+- Power Query
+---
 
-    `SELECT count(*) FROM customers;`
+## 📂 Dataset
 
-1. Show transactions for Chennai market (market code for chennai is Mark001
+The project uses multiple relational tables including:
 
-    `SELECT * FROM transactions where market_code='Mark001';`
+- Customers
+- Products
+- Transactions
+- Markets
+- Date
 
-1. Show distrinct product codes that were sold in chennai
+These tables are connected using relationships to create a complete sales data model.
 
-    `SELECT distinct product_code FROM transactions where market_code='Mark001';`
+---
 
-1. Show transactions where currency is US dollars
+## 📈 Dashboard Features
 
-    `SELECT * from transactions where currency="USD"`
+- Total Revenue KPI
+- Total Sales Quantity
+- Revenue Trend Analysis
+- Market-wise Sales Performance
+- Top Customers
+- Top Selling Products
+- Monthly Revenue Analysis
+- Interactive Filters (Year, Month, Market, Customer, Product)
 
-1. Show transactions in 2020 join by date table
+---
 
-    `SELECT transactions.*, date.* FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020;`
+## 🧹 Data Preparation
 
-1. Show total revenue in year 2020,
+- Imported SQL database into Power BI
+- Cleaned and transformed data using Power Query
+- Removed invalid records
+- Normalized USD transactions into INR
+- Created relationships between tables
+- Developed DAX measures for KPI calculations
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.currency="INR\r" or transactions.currency="USD\r";`
-	
-1. Show total revenue in year 2020, January Month,
+---
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");`
+## 📊 Business Insights
 
-1. Show total revenue in year 2020 in Chennai
+- Identified high-performing markets based on revenue.
+- Analyzed monthly sales trends.
+- Determined top customers contributing to revenue.
+- Compared product performance across markets.
+- Built interactive reports for business decision-making.
 
-    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020
-and transactions.market_code="Mark001";`
+---
+
+## 🎯 Skills Demonstrated
+
+- SQL Queries
+- Data Cleaning
+- ETL Process
+- Data Modeling
+- Power Query
+- DAX
+- Dashboard Design
+- KPI Reporting
+- Business Analysis
+- Data Visualization
+
+---
+
+## 📸 Dashboard Preview
+```
+- Key Insights
+<img width="559" height="359" alt="image" src="https://github.com/user-attachments/assets/1ab0bf97-8776-4c33-9823-23c8acf92b85" />
+- Profit Analysis
+<img width="562" height="335" alt="image" src="https://github.com/user-attachments/assets/0a9b9561-4c23-431b-8ff8-2d97e30aa918" />
+- Performance Insights
+<img width="552" height="338" alt="image" src="https://github.com/user-attachments/assets/1c94b54e-4bbb-4131-b374-6a96a9d817ab" />
 
 
-Data Analysis Using Power BI
-============================
+```
 
-1. Formula to create norm_amount column
-
-`= Table.AddColumn(#"Filtered Rows", "norm_amount", each if [currency] = "USD" or [currency] ="USD#(cr)" then [sales_amount]*75 else [sales_amount], type any)`
-
+---
 
 
